@@ -13,7 +13,7 @@
     <AssemblyName>FinalGame</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
@@ -44,10 +44,27 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CharacterScripting\MrKrabs.cs" />
+    <Compile Include="CharacterScripting\Plankton.cs" />
+    <Compile Include="CharacterScripting\PlanktonInputController.cs" />
+    <Compile Include="CharacterScripting\PlayerController.cs" />
+    <Compile Include="MonogameDirectory\DrawableSprite.cs" />
+    <Compile Include="MonogameDirectory\FPS.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Map.cs" />
+    <Compile Include="MonogameDirectory\GameConsole.cs" />
+    <Compile Include="MonogameDirectory\GameState.cs" />
+    <Compile Include="MonogameDirectory\GameStateManager.cs" />
+    <Compile Include="MonogameDirectory\InputHandler.cs" />
+    <Compile Include="ScreenScripts\Map.cs" />
+    <Compile Include="MonogameDirectory\Sprite.cs" />
+    <Compile Include="MonogameDirectory\SpriteBatchExtensionMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MonogameDirectory\RandomQueue.cs" />
+    <Compile Include="MonogameDirectory\ScoreService.cs" />
+    <Compile Include="ScreenScripts\IntroScreen.cs" />
+    <Compile Include="ScreenScripts\GameScreen.cs" />
+    <Compile Include="ScreenScripts\ScreenManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Extended, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -56,6 +73,7 @@
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -90,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\plankton.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +117,7 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Import Project="..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets" Condition="Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" />

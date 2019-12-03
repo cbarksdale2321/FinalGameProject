@@ -11,8 +11,8 @@ namespace FinalGame
 {
     class Map
     {
-        private int tileWidth;
-        private int tileHeight;
+        public int tileWidth;
+        public int tileHeight;
         private int width;
         private int height;
 
@@ -34,8 +34,8 @@ namespace FinalGame
             {
                 for (int h = 0; h < height; h++)
                 {
-                    spriteBatch.FillRectangle(tilePosition, new Size2(tileWidth, tileHeight), Color.White);
-                    spriteBatch.FillRectangle(tilePosition + new Vector2(2,1), new Size2(tileWidth - 2, tileHeight - 2), Color.Black);
+                    spriteBatch.FillRectangle(tilePosition, new Size2(tileWidth, tileHeight), Color.Black);
+                    spriteBatch.FillRectangle(tilePosition + new Vector2(3,1), new Size2(tileWidth - 2, tileHeight - 2), Color.White);
                     tilePosition.Y += tileHeight;
                 }
                 tilePosition.Y = 0;
